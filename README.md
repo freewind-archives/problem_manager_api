@@ -24,7 +24,7 @@ https://trello.com/b/qEiAwXei/problem-manager-api
 CI
 ======
 
-http://jenkins.shuzu.org:8080/job/answer_mamager_api/
+http://jenkins.shuzu.org:8080/job/problem-manager-api/
 
 Demo
 =====
@@ -36,7 +36,7 @@ Usage
 
 **Create new problem**
 
-POST /problem
+`POST /problem`
 
 data:
 
