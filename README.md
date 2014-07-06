@@ -24,7 +24,7 @@ https://trello.com/b/qEiAwXei/problem-manager-api
 CI
 ======
 
-http://jenkins.shuzu.org:8080/job/problem-manager-api/
+http://jenkins.shuzu.org:8080/job/problem_manager_api/
 
 Demo
 =====
