@@ -9,12 +9,12 @@ This project is providing restful API to manage problems:
 4. show a problem
 5. get a list of problems
 
-technical stack
+technology stack
 ================
 
-Scala: 2.11.0
-Play: 2.2.3
-Database: h2
+1. Scala: 2.11.0
+1. Play: 2.2.3
+1. Database: h2
 
 Kanban:
 ========
