@@ -1,16 +1,11 @@
 #!/bin/bash
 
-cd $WORKSPACE
-play clean compile stage
+heroku apps:destroy problem-manager-api --confirm
+heroku apps:create problem-manager-api
 
-deploy=~/scala_workshop_publish/problem_manager_api
-mkdir -p $deploy
+git checkout master
+git add build_version
+git commit -m "update build_version file"
 
-cd $deploy
-test -f scripts/stop.sh && ./scripts/stop.sh || true
-rm -rf *
-
-cd $deploy
-cp -r $WORKSPACE/target/universal/stage/* $deploy
-
-BUILD_ID=dontKillMe ./scripts/start.sh
+git remote add heroku git@heroku.com:problem-manager-api.git
+git push heroku master
