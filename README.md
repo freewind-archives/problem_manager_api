@@ -29,7 +29,7 @@ http://jenkins.shuzu.org:8080/job/problem_manager_api/
 Demo
 =====
 
-http://shuzu.org:10001
+http://problem-manager-api.herokuapp.com/
 
 Usage
 =====
