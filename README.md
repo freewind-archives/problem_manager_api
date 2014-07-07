@@ -19,7 +19,7 @@ technology stack
 Kanban:
 ========
 
-https://trello.com/b/qEiAwXei/problem-manager-api
+https://huboard.com/tw-scala-workshop/problem_manager_api
 
 CI
 ======
