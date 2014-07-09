@@ -16,6 +16,12 @@ class DiagnosticSpec extends Specification {
       status(ping) must equalTo(OK)
       contentAsString(ping) must contain ("ok")
     }
+    "render =Problem Manager Api= when visit name" in new WithApplication{
+      val ping = route(FakeRequest(GET, "/diagnostic/name")).get
+
+      status(ping) must equalTo(OK)
+      contentAsString(ping) must contain ("Problem Manager Api")
+    }
   }
 
 }
