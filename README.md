@@ -51,4 +51,8 @@ data:
 
 Response: 201 (created)
 
+How to run test
+================
+play test
+
 **TODO**
