@@ -43,7 +43,7 @@ data:
     {
         "title": "problem title",
         "level": 1,
-        "content" "content or descript",
+        "content" "content or description",
         "input": "intput data for testing",
         "output": "expected output data for testing",
         "author": "who contributes this problem"
