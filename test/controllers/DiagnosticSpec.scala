@@ -14,7 +14,6 @@ class DiagnosticSpec extends Specification {
       val ping = route(FakeRequest(GET, "/diagnostic/ping")).get
 
       status(ping) must equalTo(OK)
-      contentType(ping) must beSome.which(_ == "text/html")
       contentAsString(ping) must contain ("ok")
     }
   }
