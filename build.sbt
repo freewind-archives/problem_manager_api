@@ -6,9 +6,11 @@ libraryDependencies ++= Seq(
   jdbc,
   anorm,
   cache
-)     
+)
 
 play.Project.playScalaSettings
+
+org.scalastyle.sbt.ScalastylePlugin.Settings
 
 mappings in Universal ++=
   (baseDirectory.value / "scripts" * "*" get) map
