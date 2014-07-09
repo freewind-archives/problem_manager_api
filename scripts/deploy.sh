@@ -1,6 +1,6 @@
 #!/bin/bash
 
-heroku apps:destroy problem-manager-api --confirm
+heroku apps:destroy -a problem-manager-api --confirm problem-manager-api
 heroku apps:create problem-manager-api
 
 git checkout master
