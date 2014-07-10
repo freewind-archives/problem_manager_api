@@ -11,23 +11,23 @@ import play.api.libs.json._
 class DiagnosticSpec extends Specification {
   "Diagnostic" should {
 
-    "render ok when visit ping" in new WithApplication{
+    "render ok when visit ping" in new WithApplication {
       val ping = route(FakeRequest(GET, "/diagnostic/ping")).get
 
-      status(ping) must equalTo(OK)
-      contentAsString(ping) must contain ("ok")
+      status(ping) === OK
+      contentAsString(ping) must contain("ok")
     }
     "render =Problem Manager Api= when visit name" in new WithApplication {
       val ping = route(FakeRequest(GET, "/diagnostic/name")).get
 
-      status(ping) must equalTo(OK)
+      status(ping) === OK
       contentAsString(ping) must contain("Problem Manager Api")
     }
 
-    "return hello message when recieve a post request with json data" in new WithApplication{
-      val hello = route(FakeRequest(POST, "/diagnostic/hello").withJsonBody(Json.parse("""{ "name": "value" }"""))).get
+    "return hello message when recieve a post request with json data" in new WithApplication {
+      val hello = route(FakeRequest(POST, "/diagnostic/hello").withJsonBody(Json.parse( """{ "name": "value" }"""))).get
 
-      status(hello) must equalTo(OK)
+      status(hello) === OK
       contentType(hello) must beSome("application/json")
       contentAsJson(hello) mustEqual Json.obj("hello" -> "value")
     }
