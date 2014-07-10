@@ -3,10 +3,11 @@
 # ~~~~
 
 # Home page
-GET         /                        controllers.Application.index
-GET         /diagnostic/ping         controllers.Diagnostic.ping
-GET         /diagnostic/name         controllers.Diagnostic.name
-POST        /diagnostic/hello        controllers.Diagnostic.hello
+GET         /                          controllers.Application.index
+GET         /diagnostic/ping           controllers.Diagnostic.ping
+GET         /diagnostic/name           controllers.Diagnostic.name
+GET         /diagnostic/version        controllers.Diagnostic.version
+POST        /diagnostic/hello          controllers.Diagnostic.hello
 
 # Map static resources from the /public folder to the /assets URL path
-GET         /assets/*file            controllers.Assets.at(path="/public", file)
+GET         /assets/*file              controllers.Assets.at(path="/public", file)
