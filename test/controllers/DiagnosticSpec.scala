@@ -28,7 +28,7 @@ class DiagnosticSpec extends Specification {
       val hello = route(FakeRequest(POST, "/diagnostic/hello").withJsonBody(Json.parse("""{ "name": "value" }"""))).get
 
       status(hello) must equalTo(OK)
-
+      contentType(hello) must beSome("application/json")
       contentAsJson(hello) mustEqual Json.obj("hello" -> "value")
     }
   }
