@@ -53,9 +53,8 @@ class DiagnosticSpec extends Specification {
       contentType(hello) must beSome("application/json")
       contentAsJson(hello) mustEqual Json.obj("hello" -> "value")
     }
-
-    private def cleanUpFile = Path("build_version").deleteIfExists()
-
   }
+
+  private def cleanUpFile = Path("build_version").deleteIfExists()
 
 }
